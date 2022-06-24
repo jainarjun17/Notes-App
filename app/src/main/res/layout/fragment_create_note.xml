@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createNoteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ColorPrimaryDark"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/tick_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_circle_tick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@color/ColorDarkBlack"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/back_img">
+
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/background"
+                android:backgroundTint="@color/ColorDarkBlack"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="6dp"
+                android:paddingEnd="5dp"
+                android:queryHint="@string/search"
+                android:text="@string/note_title"
+                android:textSize="24sp"
+                android:theme="@style/ThemeOverlay.search" />
+
+
+            <TextView
+                android:id="@+id/data_time_text_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background"
+                android:backgroundTint="@color/ColorDarkBlack"
+                android:maxLines="1"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="date"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:theme="@style/ThemeOverlay.search"
+
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ColorDarkBlack"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/back_img">
+
+                <View
+                    android:id="@+id/colorView"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/teal_700" />
+
+                <EditText
+
+                    android:id="@+id/subTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="@color/ColorDarkBlack"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:text="sub title"
+                    android:textColor="@color/lightGray"
+                    android:textSize="18sp"
+                    android:theme="@style/ThemeOverlay.search"
+
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/background"
+            android:backgroundTint="@color/ColorDarkBlack"
+            android:fontFamily="@font/manrope_regular"
+            android:inputType="textMultiLine"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="@string/write_your_notes_here"
+            android:textSize="14sp"
+            android:theme="@style/ThemeOverlay.search"
+            app:layout_constraintTop_toBottomOf="@id/mainLayout" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="330dp"
+            android:layout_height="280dp"
+            android:background="@color/ColorPrimaryDark"
+            android:padding="20dp"
+            app:layout_constraintBottom_toTopOf="@id/showBottomSheetIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionEditText" />
+
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:padding="10dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/ColorPrimaryDark"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintTop_toTopOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionEditText"
+            app:tint="@color/ColorWhiteNote" />
+
+        <ImageView
+            android:id="@+id/showBottomSheetIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

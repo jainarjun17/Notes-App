@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.search"
+    android:layout_margin="11dp"
+    app:cardBackgroundColor="@color/ColorPrimaryDark"
+    app:cardCornerRadius="17dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/ColorPrimaryDark"
+            android:maxLines="1"
+            android:paddingStart="6dp"
+            android:paddingEnd="5dp"
+            android:queryHint="@string/search"
+            android:text="My notes"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/subTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/ColorPrimaryDark"
+            android:maxLines="1"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="My notes"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/dataTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/ColorPrimaryDark"
+            android:maxLines="1"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="dd/mm/yyyy"
+            android:textSize="12sp"
+            android:textColor="@color/gray"
+            />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
